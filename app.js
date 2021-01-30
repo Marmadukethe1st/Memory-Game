@@ -59,6 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
     var cardsChosen = []
     var cardsChosenId = []
     var cardsWon = []
+    var cardsPicked = []
 
     //create the board
     function createBoard() {
@@ -80,6 +81,8 @@ document.addEventListener('DOMContentLoaded', () => {
             cards[optionOneId].setAttribute('src', 'images/blank.png')
             cards[optionTwoId].setAttribute('src', 'images/blank.png')
             cardsWon.push(cardsChosen)
+            cardsPicked.push(cardsChosenId[0])
+            cardsPicked.push(cardsChosenId[1])
         } else {
             cards[optionOneId].setAttribute('src', 'images/back.png')
             cards[optionTwoId].setAttribute('src', 'images/back.png')
@@ -98,10 +101,14 @@ document.addEventListener('DOMContentLoaded', () => {
         var cardId = this.getAttribute('data-id')
         cardsChosen.push(cardArray[cardId].name)
         cardsChosenId.push(cardId)
-        this.setAttribute('src', cardArray[cardId].img)
-        if (cardsChosen.length === 2) {
-            setTimeout(checkForMatch, 500)
-        }
+        if (cardsPicked.includes(cardId)) {
+            alert('Pick a Card')
+        } else {
+            this.setAttribute('src', cardArray[cardId].img)
+            if (cardsChosen.length === 2) {
+                setTimeout(checkForMatch, 500)
+            }
+        }    
     }
 
 
