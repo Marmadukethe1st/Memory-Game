@@ -3,10 +3,10 @@ Social Media Memory Game
 A simple card memory game.
 
 Improvements:-
-    CSS styling:-
+*    CSS styling:-
         Border
         Centered
-    JS:-
+*    JS:-
         Prevent selecting the same card twice
-    HTML:-
+*    HTML:-
         Added a title
