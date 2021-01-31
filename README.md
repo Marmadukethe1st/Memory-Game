@@ -12,3 +12,5 @@ Improvements:-
         Prevent selecting the same card twice. See issues for the functionality changes made.
 *    HTML:-
         Added a title, subtitle
+
+![](game.png)
