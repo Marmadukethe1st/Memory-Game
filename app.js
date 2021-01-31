@@ -101,14 +101,20 @@ document.addEventListener('DOMContentLoaded', () => {
         var cardId = this.getAttribute('data-id')
         cardsChosen.push(cardArray[cardId].name)
         cardsChosenId.push(cardId)
-        if (cardsPicked.includes(cardId)) {
-            alert('Pick a Card')
-        } else {
-            this.setAttribute('src', cardArray[cardId].img)
-            if (cardsChosen.length === 2) {
-                setTimeout(checkForMatch, 500)
+        if (cardsChosenId[0] !== cardsChosenId[1]) {
+            if (cardsPicked.includes(cardId)) {
+                alert('Pick a Card')
+            } else {
+                this.setAttribute('src', cardArray[cardId].img)
+                if (cardsChosen.length === 2) {
+                    setTimeout(checkForMatch, 700)
+                }
             }
-        }    
+        } else {
+            cardsChosenId.pop()
+            cardsChosen.pop()
+            alert('You can\'t choose the same card')
+        }  
     }
 
 
