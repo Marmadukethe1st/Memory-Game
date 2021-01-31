@@ -6,7 +6,9 @@ Improvements:-
 *    CSS styling:-
         Border
         Centered
+        Colour
+        Font
 *    JS:-
-        Prevent selecting the same card twice
+        Prevent selecting the same card twice. See issues for the functionality changes made.
 *    HTML:-
-        Added a title
+        Added a title, subtitle
